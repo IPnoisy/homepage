@@ -6,61 +6,72 @@
     <title>E-book - Viver é Além de Existir</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #223a45;
+            background-color: #1e2a36; /* Azul escuro */
             color: white;
         }
         header {
-            background-color: #333;
-            padding: 20px;
+            background-color: #3a4a67; /* Azul mais claro */
+            padding: 30px;
             text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         h1 {
             margin: 0;
-            color: #fff;
+            color: #f4f4f4;
+            font-size: 36px;
+            font-weight: bold;
         }
         .content {
             padding: 40px 20px;
             text-align: center;
         }
         .content h2 {
-            color: #bbb;
-            font-size: 28px;
+            color: #c4d4e1; /* Azul acinzentado */
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 20px;
         }
         .content p {
-            color: #ccc;
+            color: #e0e9f3; /* Texto mais suave */
             font-size: 18px;
+            line-height: 1.6;
             margin-bottom: 20px;
         }
         .button {
-            background-color: #18bfc2;
-            color: black;
+            background-color: #4a76a8; /* Azul médio */
+            color: white;
             padding: 15px 30px;
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: bold;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
             text-decoration: none;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .button:hover {
-            background-color: #18bfc2;
+            background-color: #3e5a7a; /* Azul escuro quando passar o mouse */
+            transform: scale(1.05);
         }
         footer {
-            background-color: #6598ad;
+            background-color: #2f3c51; /* Azul ainda mais escuro */
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             position: fixed;
             width: 100%;
             bottom: 0;
             color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         /* Centralizar a imagem do QR Code e ajustar o tamanho */
         .qr-code {
             display: block;
-            margin: 0 auto 20px;  /* centraliza e dá um espaço abaixo da imagem */
-            max-width: 200px;  /* ajusta o tamanho máximo da imagem */
+            margin: 0 auto 30px;  /* centraliza e dá um espaço abaixo da imagem */
+            max-width: 180px;  /* ajusta o tamanho máximo da imagem */
             width: 100%;
         }
     </style>
@@ -72,16 +83,16 @@
 </header>
 
 <div class="content">
-    <h2>Adquira agora o seu por menos de 10 Reais!</h2>
-    <p>O E-book "Viver é Além de Existir: Pare de sobreviver e comece a viver." é para você que deseja conquistar uma vida mais plena, </p>
+    <h2>Adquira agora o seu por menos de 5 Reais!</h2>
+    <p>O E-book "Viver é Além de Existir: Pare de sobreviver e comece a viver." é para você que deseja conquistar uma vida mais plena,</p>
     <p>tomando decisões conscientes e vivenciando cada momento com intensidade.</p>
-    <p>Por apenas: R$ 8,90</p>
+    <p>Por apenas: R$ 4,90</p>
 
     <!-- Imagem do QR Code do Pix, agora centralizada e com tamanho ajustado -->
-    <img src="qr code pix.png" alt="Pague com QR CODE" class="qr-code">
+    <img src="qr code pagamento.png" alt="Pague com QR CODE" class="qr-code">
     
-    <a href="00020126820014BR.GOV.BCB.PIX0124limagregorio64@gmail.com0232E-Book - Viver é Além de Existir52040000530398654044.905802BR5925Joao Vitor Gregorio de Li6009SAO PAULO61080540900062250521B2j6f2ETym8JfbA1el2wm6304B2A8"> Pagar via Pix</a>
-    
+    <!-- Botão de pagamento -->
+    <a href="https://nubank.com.br/cobrar/1el2wm/679c305e-3fe9-432c-9cc8-77cba241077a" class="button" target="_blank">Pagar via Pix</a>
 </div>
 
 <footer>
