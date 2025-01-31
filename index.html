@@ -40,6 +40,11 @@
             line-height: 1.6;
             margin-bottom: 20px;
         }
+        .highlight {
+            color: #ffeb3b; /* Destacar o preço em amarelo */
+            font-size: 24px;
+            font-weight: bold;
+        }
         .button {
             background-color: #4a76a8; /* Azul médio */
             color: white;
@@ -52,6 +57,7 @@
             text-decoration: none;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block; /* Garante que o botão seja exibido corretamente */
         }
         .button:hover {
             background-color: #3e5a7a; /* Azul escuro quando passar o mouse */
@@ -60,12 +66,13 @@
         footer {
             background-color: #2f3c51; /* Azul ainda mais escuro */
             text-align: center;
-            padding: 15px;
+            padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
             color: white;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 14px; /* Diminui o tamanho da fonte do footer */
         }
         /* Centralizar a imagem do QR Code e ajustar o tamanho */
         .qr-code {
@@ -73,6 +80,16 @@
             margin: 0 auto 30px;  /* centraliza e dá um espaço abaixo da imagem */
             max-width: 180px;  /* ajusta o tamanho máximo da imagem */
             width: 100%;
+        }
+        /* Garantir que o botão seja bem visível em dispositivos móveis */
+        @media (max-width: 768px) {
+            .button {
+                font-size: 18px; /* Diminui o tamanho da fonte no celular */
+                padding: 12px 25px; /* Ajusta o padding no celular */
+            }
+            footer {
+                font-size: 12px; /* Ajusta o tamanho da fonte do footer no celular */
+            }
         }
     </style>
 </head>
@@ -86,7 +103,9 @@
     <h2>Adquira agora o seu por menos de 10 Reais!</h2>
     <p>O E-book "Viver é Além de Existir: Pare de sobreviver e comece a viver." é para você que deseja conquistar uma vida mais plena,</p>
     <p>tomando decisões conscientes e vivenciando cada momento com intensidade.</p>
-    <p>Por apenas: R$ 8,90</p>
+    
+    <!-- Preço destacado -->
+    <p class="highlight">Por apenas: R$ 8,90</p>
 
     <!-- Imagem do QR Code do Pix, agora centralizada e com tamanho ajustado -->
     <img src="qr code pix.png" alt="Pague com QR CODE" class="qr-code">
