@@ -181,6 +181,36 @@
             width: 40px;
             height: 40px;
         }
+
+        /* Estilo para a frase com blur e brilho */
+        .summary-text {
+            color: white;
+            font-size: 24px;
+            margin: 20px 0;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .summary-image {
+            width: 450px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .blurred-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20sum%C3%A1rio%20e-book(Viver%20%C3%A9%20Al%C3%A9m%20de%20Existir).png?raw=true');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px);
+            opacity: 0.6;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
@@ -191,6 +221,15 @@
 
 <!-- IMAGEM DA PROPAGANDA DO E-BOOK -->
 <img src="https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20do%20produto%20venda%20(Viver%20%C3%A9%20Al%C3%A9m%20de%20existir).png?raw=true" alt="Propaganda do E-book" class="product-image">
+
+<!-- Frase abaixo da imagem de propaganda -->
+<p class="summary-text">10 Capítulos que vão mudar sua visão de vida.</p>
+
+<!-- Imagem do sumário com efeito de blur -->
+<div class="summary-image-container" style="position: relative;">
+    <div class="blurred-image"></div>
+    <img src="https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20sum%C3%A1rio%20e-book(Viver%20%C3%A9%20Al%C3%A9m%20de%20Existir).png?raw=true" alt="Sumário do E-book" class="summary-image">
+</div>
 
 <div class="content">
     <h2>Adquira agora o seu por menos de 10 Reais!</h2>
