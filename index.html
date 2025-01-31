@@ -14,7 +14,7 @@
             position: relative;
             overflow-x: hidden;
         }
-        /* Adicionando imagem de fundo com opacidade, usando URL do GitHub */
+        /* Adicionando imagem de fundo com opacidade */
         body::before {
             content: '';
             position: absolute;
@@ -22,15 +22,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20perfil%20IP%20NOISY.jpg?raw=true'); /* Caminho direto da imagem */
+            background-image: url('https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20perfil%20IP%20NOISY.jpg?raw=true');
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
             opacity: 0.3; /* Opacidade da imagem */
-            z-index: -1; /* Coloca a camada de fundo atrás do conteúdo */
+            z-index: -1;
         }
         header {
-            background-color: rgba(58, 74, 103, 0.8); /* Azul mais claro, com transparência */
+            background-color: rgba(58, 74, 103, 0.8);
             padding: 30px;
             text-align: center;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -38,35 +38,37 @@
         h1 {
             margin: 0;
             color: #f4f4f4;
-            font-size: 36px;
+            font-size: 30px;
             font-weight: bold;
         }
         .content {
-            padding: 40px 20px;
+            padding: 30px 15px;
             text-align: center;
+            max-width: 500px;
+            margin: auto;
         }
         .content h2 {
-            color: #c4d4e1; /* Azul acinzentado */
-            font-size: 30px;
+            color: #c4d4e1;
+            font-size: 26px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .content p {
-            color: #e0e9f3; /* Texto mais suave */
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            color: #e0e9f3;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
         }
         .highlight {
-            color: #ffeb3b; /* Destacar o preço em amarelo */
-            font-size: 24px;
+            color: #ffeb3b;
+            font-size: 22px;
             font-weight: bold;
         }
         .button {
-            background-color: #4a76a8; /* Azul médio */
+            background-color: #4a76a8;
             color: white;
-            padding: 15px 30px;
-            font-size: 22px;
+            padding: 12px 25px;
+            font-size: 20px;
             font-weight: bold;
             border: none;
             cursor: pointer;
@@ -74,75 +76,69 @@
             text-decoration: none;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease, transform 0.2s ease;
-            display: inline-block; /* Garante que o botão seja exibido corretamente */
+            display: inline-block;
         }
         .button:hover {
-            background-color: #3e5a7a; /* Azul escuro quando passar o mouse */
+            background-color: #3e5a7a;
             transform: scale(1.05);
         }
         footer {
-            background-color: #2f3c51; /* Azul ainda mais escuro */
+            background-color: #2f3c51;
             text-align: center;
-            padding: 10px;
-            position: fixed;
+            padding: 8px;
             width: 100%;
             bottom: 0;
             color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 14px; /* Diminui o tamanho da fonte do footer */
+            font-size: 12px;
         }
-        /* Centralizar a imagem do QR Code e ajustar o tamanho */
+        /* Centralizar a imagem do QR Code e ajustar tamanho */
         .qr-code {
             display: block;
-            margin: 0 auto 30px;  /* centraliza e dá um espaço abaixo da imagem */
-            max-width: 180px;  /* ajusta o tamanho máximo da imagem */
+            margin: 0 auto 25px;
+            max-width: 160px;
             width: 100%;
         }
-        /* Garantir que o botão seja bem visível em dispositivos móveis */
+        /* Ajuste para telas menores */
         @media (max-width: 768px) {
             .button {
-                font-size: 18px; /* Diminui o tamanho da fonte no celular */
-                padding: 12px 25px; /* Ajusta o padding no celular */
+                font-size: 18px;
+                padding: 10px 20px;
             }
-            footer {
-                font-size: 12px; /* Ajusta o tamanho da fonte do footer no celular */
-            }
-            .content h2 {
-                font-size: 24px; /* Ajusta o tamanho da fonte no celular */
+            .content {
+                max-width: 90%;
             }
             .social-links {
-                flex-direction: column; /* Coloca os ícones em coluna no celular */
+                flex-direction: row;
                 gap: 15px;
-                margin-top: 20px;
+                justify-content: center;
             }
             .social-links img {
-                width: 40px; /* Tamanho dos ícones */
-                height: 40px;
+                width: 35px;
+                height: 35px;
             }
             .social-links p {
-                font-size: 14px; /* Ajusta o tamanho da fonte */
+                font-size: 14px;
             }
         }
-        /* Estilos para redes sociais */
+        /* Redes sociais lado a lado */
         .social-links {
-            margin-top: 40px;
+            margin-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 20px; /* Espaço entre os ícones */
+            gap: 30px;
             text-align: center;
         }
         .social-links a {
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             text-decoration: none;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            gap: 8px;
         }
         .social-links img {
-            width: 40px; /* Tamanho dos ícones */
+            width: 40px;
             height: 40px;
-            margin-bottom: 5px;
         }
     </style>
 </head>
@@ -160,8 +156,8 @@
     <!-- Preço destacado -->
     <p class="highlight">Por apenas: R$ 8,90</p>
 
-    <!-- Imagem do QR Code do Pix, agora centralizada e com tamanho ajustado -->
-    <img src="qr code pagamento.png" alt="Pague com QR CODE" class="qr-code">
+    <!-- Imagem do QR Code do Pix -->
+    <img src="qr pix.png" alt="Pague com QR CODE" class="qr-code">
     
     <!-- Botão de pagamento -->
     <a href="https://nubank.com.br/cobrar/1el2wm/679c305e-3fe9-432c-9cc8-77cba241077a" class="button" target="_blank">Pagar via Pix</a>
@@ -170,11 +166,11 @@
 <!-- Redes sociais -->
 <div class="social-links">
     <a href="https://www.tiktok.com/@ip_noisy" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_logo_2021.svg" alt="TikTok">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/TikTok_logo.svg" alt="TikTok">
         <p>@ip_noisy</p>
     </a>
     <a href="https://www.instagram.com/ip_noisy" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
         <p>@ip_noisy</p>
     </a>
 </div>
