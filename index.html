@@ -136,6 +136,9 @@
             .product-image {
                 width: 600px; /* Aumenta a imagem para telas grandes */
             }
+            .summary-image {
+                width: 600px; /* Ajusta o tamanho da imagem do sumário para o mesmo tamanho da propaganda */
+            }
         }
 
         /* Media query para telas menores (Celular) */
@@ -159,6 +162,9 @@
             }
             .product-image {
                 width: 90%; /* Reduz a imagem para telas pequenas */
+            }
+            .summary-image {
+                width: 90%; /* Ajusta o tamanho da imagem do sumário para o mesmo tamanho da propaganda em telas menores */
             }
         }
 
@@ -191,11 +197,18 @@
             position: relative;
         }
 
+        .summary-image-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
         .summary-image {
             width: 450px;
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+            max-width: 100%;
         }
 
         .blurred-image {
@@ -226,7 +239,7 @@
 <p class="summary-text">10 Capítulos que vão mudar sua visão de vida.</p>
 
 <!-- Imagem do sumário com efeito de blur -->
-<div class="summary-image-container" style="position: relative;">
+<div class="summary-image-container">
     <div class="blurred-image"></div>
     <img src="https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20sum%C3%A1rio%20e-book(Viver%20%C3%A9%20Al%C3%A9m%20de%20Existir).png?raw=true" alt="Sumário do E-book" class="summary-image">
 </div>
