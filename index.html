@@ -35,8 +35,8 @@
             margin-bottom: 20px;
         }
         .button {
-            background-color: #e91e63;
-            color: white;
+            background-color: #18bfc2;
+            color: black;
             padding: 15px 30px;
             font-size: 20px;
             border: none;
@@ -45,16 +45,23 @@
             text-decoration: none;
         }
         .button:hover {
-            background-color: ##18bfc2;
+            background-color: #18bfc2;
         }
         footer {
-            background-color: ##386375;
+            background-color: #6598ad;
             text-align: center;
             padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
             color: white;
+        }
+        /* Centralizar a imagem do QR Code e ajustar o tamanho */
+        .qr-code {
+            display: block;
+            margin: 0 auto 20px;  /* centraliza e dá um espaço abaixo da imagem */
+            max-width: 200px;  /* ajusta o tamanho máximo da imagem */
+            width: 100%;
         }
     </style>
 </head>
@@ -70,9 +77,10 @@
     <p>tomando decisões conscientes e vivenciando cada momento com intensidade.</p>
     <p>Por apenas: R$ 4,90</p>
 
-    <img src="qr code pagamento.png" alt="Pague com QR CODE">
+    <!-- Imagem do QR Code do Pix, agora centralizada e com tamanho ajustado -->
+    <img src="qr code pagamento.png" alt="Pague com QR CODE" class="qr-code">
     
-    <a href="https://nubank.com.br/cobrar/1el2wm/679c305e-3fe9-432c-9cc8-77cba241077a" class="button" target="_blank">ou Pagar via Pix</a>
+    <a href="https://nubank.com.br/cobrar/1el2wm/679c305e-3fe9-432c-9cc8-77cba241077a" class="button" target="_blank"> Pagar via Pix</a>
     
 </div>
 
@@ -82,4 +90,3 @@
 
 </body>
 </html>
-
