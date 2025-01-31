@@ -21,8 +21,9 @@
             text-align: center;
             padding-bottom: 60px;
             position: relative;
+            overflow-x: hidden; /* Impede o scroll horizontal */
         }
-        /* Imagem de fundo com opacidade */
+        /* Imagem de fundo fixada */
         body::before {
             content: '';
             position: absolute;
@@ -33,8 +34,8 @@
             background-image: url('https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20perfil%20IP%20NOISY.jpg?raw=true');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            opacity: 0.2; /* Ajustei a opacidade para melhor contraste */
+            background-attachment: fixed; /* Fixando a imagem ao fundo */
+            opacity: 0.2; /* Opacidade ajustada */
             z-index: -1;
         }
         header {
@@ -75,6 +76,12 @@
             border-radius: 5px;
             display: inline-block;
             margin: 15px 0;
+        }
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            color: red; /* Destaque em vermelho */
+            margin-top: 5px;
         }
         .button {
             background-color: #888;
@@ -128,8 +135,8 @@
             gap: 8px;
         }
         .social-links img {
-            width: 35px;
-            height: 35px;
+            width: 40px; /* Ajustado para o mesmo tamanho */
+            height: 40px;
         }
         /* Ajuste para telas menores */
         @media (max-width: 768px) {
@@ -144,8 +151,8 @@
                 gap: 15px;
             }
             .social-links img {
-                width: 30px;
-                height: 30px;
+                width: 35px;
+                height: 35px;
             }
             .social-links p {
                 font-size: 14px;
@@ -165,7 +172,8 @@
     <p>tomando decisões conscientes e vivenciando cada momento com intensidade.</p>
     
     <!-- Preço destacado -->
-    <p class="highlight">Por apenas: R$ 8,90</p>
+    <p class="highlight">Por apenas:</p>
+    <p class="price">R$ 8,90</p>
 
     <!-- QR Code atualizado -->
     <img src="https://github.com/IPnoisy/paginadevenda/blob/main/qr%20code%20pix.png?raw=true" alt="Pague com QR CODE" class="qr-code">
