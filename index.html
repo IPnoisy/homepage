@@ -138,6 +138,7 @@
             }
             .summary-image {
                 width: 600px; /* Igualando o tamanho da imagem do sumário à da propaganda no PC */
+                margin: 0 auto;
             }
         }
 
@@ -164,7 +165,9 @@
                 width: 90%; /* Reduz a imagem para telas pequenas */
             }
             .summary-image {
-                width: 90%; /* Ajusta o tamanho da imagem do sumário para o celular */
+                width: 100%; /* Ajusta o tamanho da imagem do sumário para o celular */
+                max-width: 600px; /* Garante que a imagem não ultrapasse o tamanho máximo */
+                margin: 0 auto; /* Centraliza a imagem */
             }
         }
 
