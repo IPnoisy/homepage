@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-book - Viver é Além de Existir</title>
+    <title>E-BOOK: VIVER É ALÉM DE EXISTIR</title>
     <style>
         * {
             margin: 0;
@@ -45,7 +45,7 @@
         }
         h1 {
             color: #f5f5f5;
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
         }
         .content {
@@ -77,20 +77,21 @@
         }
         .highlight {
             color: #ffffff;
-            font-size: 22px;
+            font-size: 26px;
             font-weight: bold;
             background: #333;
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
             margin-top: 15px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
         .price {
-            font-size: 36px;
+            font-size: 40px;
             font-weight: bold;
-            color: white;
+            color: #ff6347;
             background: black;
-            padding: 8px 20px;
+            padding: 10px 30px;
             border-radius: 8px;
             display: inline-block;
             margin-top: 5px;
@@ -158,9 +159,7 @@
             flex-direction: column;
             max-width: 600px;
             width: 100%;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s forwards;
+            display: none; /* Inicialmente oculto */
         }
 
         .testimonial-heading {
@@ -224,14 +223,14 @@
 <body>
 
 <header>
-    <h1>E-book: Viver é Além de Existir.</h1>
+    <h1>E-BOOK: VIVER É ALÉM DE EXISTIR</h1>
 </header>
 
 <!-- IMAGEM DA PROPAGANDA DO E-BOOK -->
 <img src="https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20do%20produto%20venda%20(Viver%20%C3%A9%20Al%C3%A9m%20de%20existir).png?raw=true" alt="Propaganda do E-book" class="product-image">
 
 <!-- Frase abaixo da imagem de propaganda -->
-<p class="summary-text">10 Capítulos que vão mudar sua visão de vida.</p>
+<p class="highlight">10 Capítulos que vão mudar sua visão de vida.</p>
 
 <!-- Seção "Por que comprar?" -->
 <div class="content">
@@ -241,7 +240,7 @@
     <p class="highlight">Por apenas:</p>
     <p class="price">R$ 8,90</p>
 
-    <a href="https://payhip.com/b/pYbcF" class="button" target="_blank">COMPRAR AGORA</a>
+    <a href="https://payhip.com/b/pYbcF" class="button" target="_blank" onclick="showReviewsForm()">COMPRAR AGORA</a>
 </div>
 
 <!-- Seção Avaliações -->
@@ -283,6 +282,12 @@
 <footer>
     <p>&copy; 2025 Viver é Além de Existir. Todos os direitos reservados.</p>
 </footer>
+
+<script>
+    function showReviewsForm() {
+        document.querySelector('.reviews-form').style.display = 'flex';
+    }
+</script>
 
 </body>
 </html>
