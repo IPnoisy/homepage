@@ -112,7 +112,7 @@
         }
         .button:hover {
             background-color: #ff6347;
-            transform: scale(1.1); /* Efeito de crescimento */
+            transform: scale(1.1);
         }
         footer {
             background-color: #1a1a1a;
@@ -125,7 +125,6 @@
             bottom: 0;
         }
 
-        /* Animação de rolagem suave */
         .social-links, .testimonials, .reviews-form {
             display: flex;
             justify-content: center;
@@ -152,19 +151,25 @@
             font-style: italic;
             max-width: 500px;
             width: 100%;
+            box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
         }
 
         .reviews-form {
             flex-direction: column;
             max-width: 600px;
             width: 100%;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
         }
 
         .testimonial-heading {
-            font-size: 24px;
-            color: white;
+            font-size: 28px;
+            color: #f0a500;
             font-weight: bold;
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .social-links img {
@@ -241,7 +246,7 @@
 
 <!-- Seção Avaliações -->
 <div class="testimonial-heading">
-    AVALIAÇÕES
+    <span>AVALIAÇÕES</span>
 </div>
 
 <div class="testimonials">
