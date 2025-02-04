@@ -126,7 +126,7 @@
         }
 
         /* Animação de rolagem suave */
-        .social-links, .testimonials {
+        .social-links, .testimonials, .reviews-form {
             display: flex;
             justify-content: center;
             gap: 20px;
@@ -140,6 +140,7 @@
         .testimonials {
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
 
         .testimonial {
@@ -150,21 +151,25 @@
             color: #ccc;
             font-style: italic;
             max-width: 500px;
+            width: 100%;
+        }
+
+        .reviews-form {
+            flex-direction: column;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .testimonial-heading {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
         .social-links img {
             width: 40px;
             height: 40px;
-        }
-
-        .summary-text {
-            color: white;
-            font-size: 24px;
-            margin: 20px 0;
-            font-weight: bold;
-            position: relative;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-            animation: fadeInUp 1s forwards;
         }
 
         .product-image, .summary-image {
@@ -173,6 +178,17 @@
             border-radius: 10px;
             margin: 20px 0;
             box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .review-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #333;
+            color: white;
+            font-size: 16px;
         }
 
         /* Media query para telas maiores (PC) */
@@ -223,14 +239,28 @@
     <a href="https://payhip.com/b/pYbcF" class="button" target="_blank">COMPRAR AGORA</a>
 </div>
 
-<!-- Depoimentos -->
+<!-- Seção Avaliações -->
+<div class="testimonial-heading">
+    AVALIAÇÕES
+</div>
+
 <div class="testimonials">
     <div class="testimonial">
-        "Esse e-book mudou minha maneira de ver a vida. Agora, cada decisão tem mais significado!" - João M.
+        "Muito bom! Recomendo demais." - pdrxx
     </div>
     <div class="testimonial">
-        "Recomendo! Um conteúdo poderoso para quem quer deixar de sobreviver e começar a viver de verdade." - Ana L.
+        "Ensina mais que a escola, show demais o e-book." - vieirasx
     </div>
+    <div class="testimonial">
+        "A leitura é incrível e a reflexão profunda. Um must-have para qualquer um que quer mudar de vida!" - xavier.ol
+    </div>
+</div>
+
+<!-- Formulário para avaliações -->
+<div class="reviews-form">
+    <textarea class="review-input" placeholder="Deixe sua avaliação..."></textarea>
+    <input class="review-input" type="text" placeholder="Seu nome (opcional)" />
+    <button class="button">Enviar Avaliação</button>
 </div>
 
 <!-- Redes sociais -->
