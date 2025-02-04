@@ -263,7 +263,7 @@
 <div class="reviews-form">
     <textarea class="review-input" placeholder="Deixe sua avaliação..."></textarea>
     <input class="review-input" type="text" placeholder="Seu nome (opcional)" />
-    <button class="button">Enviar Avaliação</button>
+    <button class="button" onclick="submitReview()>Enviar Avaliação</button>
 </div>
 
 <!-- Redes sociais -->
@@ -286,41 +286,45 @@
     function showReviewsForm() {
         document.querySelector('.reviews-form').style.display = 'flex';
     }
-</script>
+<script>
     // Função para carregar as avaliações
-function loadReviews() {
-    const reviewsContainer = document.querySelector('.testimonials');
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    function loadReviews() {
+        const reviewsContainer = document.querySelector('.testimonials');
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
 
-    // Limpa as avaliações existentes e mostra as novas
-    reviewsContainer.innerHTML = '';
-    reviews.forEach(review => {
-        const reviewDiv = document.createElement('div');
-        reviewDiv.classList.add('testimonial');
-        reviewDiv.textContent = `"${review.text}" - ${review.name || 'Anônimo'}`;
-        reviewsContainer.appendChild(reviewDiv);
-    });
-}
+        // Limpa as avaliações existentes e mostra as novas
+        reviewsContainer.innerHTML = '';
+        reviews.forEach(review => {
+            const reviewDiv = document.createElement('div');
+            reviewDiv.classList.add('testimonial');
+            reviewDiv.textContent = `"${review.text}" - ${review.name || 'Anônimo'}`;
+            reviewsContainer.appendChild(reviewDiv);
+        });
+    }
 
-// Função para enviar e salvar a avaliação
-function submitReview() {
-    const reviewText = document.querySelector('.review-input').value;
-    const reviewName = document.querySelector('.review-input[type="text"]').value;
+    // Função para enviar e salvar a avaliação
+    function submitReview() {
+        const reviewText = document.querySelector('.review-input').value;
+        const reviewName = document.querySelector('.review-input[type="text"]').value;
 
-    if (!reviewText) return; // Não envia avaliações vazias
+        if (!reviewText) return; // Não envia avaliações vazias
 
-    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-    reviews.push({ text: reviewText, name: reviewName });
-    localStorage.setItem('reviews', JSON.stringify(reviews));
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.push({ text: reviewText, name: reviewName });
+        localStorage.setItem('reviews', JSON.stringify(reviews));
 
-    // Limpa o formulário e recarrega as avaliações
-    document.querySelector('.review-input').value = '';
-    document.querySelector('.review-input[type="text"]').value = '';
-    loadReviews();
-}
+        // Limpa o formulário e recarrega as avaliações
+        document.querySelector('.review-input').value = '';
+        document.querySelector('.review-input[type="text"]').value = '';
+        loadReviews();
+    }
 
-// Carregar avaliações quando a página for carregada
-window.onload = loadReviews;
+    // Ligar o botão de envio da avaliação
+    document.querySelector('.reviews-form button').addEventListener('click', submitReview);
 
+    // Carregar avaliações quando a página for carregada
+    window.onload = loadReviews;
+</script>
+  
 </body>
 </html>
