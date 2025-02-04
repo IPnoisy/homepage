@@ -242,30 +242,6 @@
     <a href="https://payhip.com/b/pYbcF" class="button" target="_blank" onclick="showReviewsForm()">COMPRAR AGORA</a>
 </div>
 
-<!-- Seção Avaliações -->
-<div class="testimonial-heading">
-    <span>AVALIAÇÕES</span>
-</div>
-
-<div class="testimonials">
-    <div class="testimonial">
-        "Muito bom! Recomendo demais." - pdrxx
-    </div>
-    <div class="testimonial">
-        "Ensina mais que a escola, show demais o e-book." - vieirasx
-    </div>
-    <div class="testimonial">
-        "A leitura é incrível e a reflexão profunda. Um must-have para qualquer um que quer mudar de vida!" - xavier.ol
-    </div>
-</div>
-
-<!-- Formulário para avaliações -->
-<div class="reviews-form">
-    <textarea class="review-input" placeholder="Deixe sua avaliação..."></textarea>
-    <input class="review-input" type="text" placeholder="Seu nome (opcional)" />
-    <button class="button" onclick="submitReview()>Enviar Avaliação</button>
-</div>
-
 <!-- Redes sociais -->
 <div class="social-links">
     <a href="https://www.tiktok.com/@ip_noisy" target="_blank">
@@ -282,49 +258,5 @@
     <p>&copy; 2025 Viver é Além de Existir. Todos os direitos reservados.</p>
 </footer>
 
-<script>
-    function showReviewsForm() {
-        document.querySelector('.reviews-form').style.display = 'flex';
-    }
-<script>
-    // Função para carregar as avaliações
-    function loadReviews() {
-        const reviewsContainer = document.querySelector('.testimonials');
-        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-
-        // Limpa as avaliações existentes e mostra as novas
-        reviewsContainer.innerHTML = '';
-        reviews.forEach(review => {
-            const reviewDiv = document.createElement('div');
-            reviewDiv.classList.add('testimonial');
-            reviewDiv.textContent = `"${review.text}" - ${review.name || 'Anônimo'}`;
-            reviewsContainer.appendChild(reviewDiv);
-        });
-    }
-
-    // Função para enviar e salvar a avaliação
-    function submitReview() {
-        const reviewText = document.querySelector('.review-input').value;
-        const reviewName = document.querySelector('.review-input[type="text"]').value;
-
-        if (!reviewText) return; // Não envia avaliações vazias
-
-        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
-        reviews.push({ text: reviewText, name: reviewName });
-        localStorage.setItem('reviews', JSON.stringify(reviews));
-
-        // Limpa o formulário e recarrega as avaliações
-        document.querySelector('.review-input').value = '';
-        document.querySelector('.review-input[type="text"]').value = '';
-        loadReviews();
-    }
-
-    // Ligar o botão de envio da avaliação
-    document.querySelector('.reviews-form button').addEventListener('click', submitReview);
-
-    // Carregar avaliações quando a página for carregada
-    window.onload = loadReviews;
-</script>
-  
 </body>
 </html>
