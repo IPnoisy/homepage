@@ -282,7 +282,6 @@
 <footer>
     <p>&copy; 2025 Viver é Além de Existir. Todos os direitos reservados.</p>
 </footer>
-    }
 <script>
     function showReviewsForm() {
         document.querySelector('.reviews-form').style.display = 'flex';
@@ -297,18 +296,49 @@
             return;
         }
 
-        const newTestimonial = document.createElement('div');
-        newTestimonial.classList.add('testimonial');
-        newTestimonial.innerHTML = `"${reviewText}" - ${name || 'Anônimo'}`;
+        // Cria o novo testemunho
+        const newTestimonial = {
+            text: reviewText,
+            name: name || 'Anônimo'
+        };
 
-        const testimonialsContainer = document.querySelector('.testimonials');
-        testimonialsContainer.appendChild(newTestimonial);
+        // Recupera as avaliações salvas ou cria um novo array
+        let testimonials = JSON.parse(localStorage.getItem('testimonials')) || [];
+
+        // Adiciona o novo testemunho ao array
+        testimonials.push(newTestimonial);
+
+        // Salva novamente no localStorage
+        localStorage.setItem('testimonials', JSON.stringify(testimonials));
+
+        // Exibe o novo testemunho na página
+        displayTestimonials();
 
         // Limpa os campos após envio
         document.querySelector('.review-input').value = '';
         document.querySelector('.reviews-form input').value = '';
         document.querySelector('.reviews-form').style.display = 'none';
     }
+
+    // Exibe os testemunhos na página
+    function displayTestimonials() {
+        const testimonialsContainer = document.querySelector('.testimonials');
+        testimonialsContainer.innerHTML = '';  // Limpa as avaliações atuais
+
+        // Recupera as avaliações do localStorage
+        const testimonials = JSON.parse(localStorage.getItem('testimonials')) || [];
+
+        // Adiciona cada avaliação ao container
+        testimonials.forEach(testimonial => {
+            const testimonialElement = document.createElement('div');
+            testimonialElement.classList.add('testimonial');
+            testimonialElement.innerHTML = `"${testimonial.text}" - ${testimonial.name}`;
+            testimonialsContainer.appendChild(testimonialElement);
+        });
+    }
+
+    // Chama a função para carregar as avaliações ao carregar a página
+    window.onload = displayTestimonials;
 
     // Associando o envio da avaliação ao botão
     document.querySelector('.reviews-form button').addEventListener('click', submitReview);
