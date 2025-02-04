@@ -282,12 +282,36 @@
 <footer>
     <p>&copy; 2025 Viver é Além de Existir. Todos os direitos reservados.</p>
 </footer>
-
+    }
 <script>
     function showReviewsForm() {
         document.querySelector('.reviews-form').style.display = 'flex';
     }
-</script>
 
+    function submitReview() {
+        const reviewText = document.querySelector('.review-input').value;
+        const name = document.querySelector('.reviews-form input').value;
+
+        if (reviewText.trim() === '') {
+            alert('Por favor, escreva uma avaliação.');
+            return;
+        }
+
+        const newTestimonial = document.createElement('div');
+        newTestimonial.classList.add('testimonial');
+        newTestimonial.innerHTML = `"${reviewText}" - ${name || 'Anônimo'}`;
+
+        const testimonialsContainer = document.querySelector('.testimonials');
+        testimonialsContainer.appendChild(newTestimonial);
+
+        // Limpa os campos após envio
+        document.querySelector('.review-input').value = '';
+        document.querySelector('.reviews-form input').value = '';
+        document.querySelector('.reviews-form').style.display = 'none';
+    }
+
+    // Associando o envio da avaliação ao botão
+    document.querySelector('.reviews-form button').addEventListener('click', submitReview);
+</script>
 </body>
 </html>
