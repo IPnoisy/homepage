@@ -55,6 +55,7 @@
             background: rgba(30, 30, 30, 0.9);
             border-radius: 10px;
             margin: 20px 0;
+            text-align: center;
         }
         .content h2 {
             color: #ccc;
@@ -89,20 +90,23 @@
             box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
         }
         .button {
-            background-color: #888;
+            background-color: #ff4500; /* Cor mais chamativa */
             color: white;
-            padding: 12px 25px;
-            font-size: 20px;
+            padding: 15px 30px;
+            font-size: 24px;
             font-weight: bold;
             border: none;
             cursor: pointer;
             border-radius: 8px;
             text-decoration: none;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 25px;
+            width: 60%; /* Botão maior e centralizado */
+            text-align: center;
+            box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3);
         }
         .button:hover {
-            background-color: #666;
+            background-color: #ff6347;
         }
         footer {
             background-color: #1a1a1a;
@@ -113,15 +117,6 @@
             font-size: 12px;
             position: fixed;
             bottom: 0;
-        }
-        .qr-code {
-            display: block;
-            margin: 20px auto;
-            max-width: 180px;
-            width: 100%;
-            border-radius: 10px;
-            background: white;
-            padding: 5px;
         }
         .product-image {
             max-width: 100%;
@@ -149,17 +144,7 @@
             }
             .button {
                 font-size: 18px;
-                padding: 10px 20px;
-            }
-            .social-links {
-                gap: 15px;
-            }
-            .social-links img {
-                width: 35px;
-                height: 35px;
-            }
-            .social-links p {
-                font-size: 14px;
+                padding: 12px 25px;
             }
             .product-image {
                 width: 90%; /* Reduz a imagem para telas pequenas */
@@ -248,9 +233,8 @@
     <p class="highlight">Por apenas:</p>
     <p class="price">R$ 8,90</p>
 
-    <img src="https://github.com/IPnoisy/paginadevenda/blob/main/qr%20code%20pix.png?raw=true" alt="Pague com QR CODE" class="qr-code">
-    
-    <a href="https://nubank.com.br/cobrar/1el2wm/679c305e-3fe9-432c-9cc8-77cba241077a" class="button" target="_blank">Pagar via Pix</a>
+    <!-- Botão centralizado para compra -->
+    <a href="https://payhip.com/b/pYbcF" class="button" target="_blank">COMPRAR AGORA</a>
 </div>
 
 <!-- Redes sociais abaixo da área de pagamento -->
