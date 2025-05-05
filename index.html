@@ -11,39 +11,23 @@
         }
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: white;
+            background-color: #f1f1f1; /* Cor de fundo mais clara */
+            color: #121212; /* Texto em preto */
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             text-align: center;
             padding-bottom: 60px;
-            position: relative;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20perfil%20IP%20NOISY.jpg?raw=true');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            opacity: 0.2;
-            z-index: -1;
         }
         header {
-            background-color: rgba(40, 40, 40, 0.9);
+            background-color: #333; /* Cor de fundo escura para o cabeçalho */
             width: 100%;
             padding: 20px;
             text-align: center;
         }
         h1 {
-            color: #f5f5f5;
+            color: white;
             font-size: 30px;
             font-weight: bold;
         }
@@ -51,7 +35,7 @@
             max-width: 600px;
             width: 90%;
             padding: 20px;
-            background: rgba(30, 30, 30, 0.9);
+            background: #e0e0e0; /* Cor de fundo cinza claro */
             border-radius: 10px;
             margin: 20px 0;
             opacity: 0;
@@ -65,25 +49,24 @@
             }
         }
         .content h2 {
-            color: #ccc;
+            color: #333;
             font-size: 24px;
             margin-bottom: 15px;
         }
         .content p {
-            color: #bbb;
+            color: #555;
             font-size: 16px;
             line-height: 1.6;
         }
         .highlight {
-            color: #ffffff;
+            color: #000000;
             font-size: 26px;
             font-weight: bold;
             padding: 5px 10px;
             border-radius: 5px;
             display: inline-block;
             margin-top: 15px;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-            background: none; /* Removido o fundo */
+            background: none;
         }
         .price {
             font-size: 40px;
@@ -94,10 +77,9 @@
             border-radius: 8px;
             display: inline-block;
             margin-top: 5px;
-            box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
         }
         .button {
-            background-color: #888;
+            background-color: #333;
             color: white;
             padding: 12px 25px;
             font-size: 20px;
@@ -115,7 +97,7 @@
             transform: scale(1.1);
         }
         footer {
-            background-color: #1a1a1a;
+            background-color: #333;
             text-align: center;
             padding: 8px;
             width: 100%;
@@ -158,7 +140,7 @@
             flex-direction: column;
             max-width: 600px;
             width: 100%;
-            display: none; /* Inicialmente oculto */
+            display: none;
         }
 
         .testimonial-heading {
@@ -194,7 +176,6 @@
             font-size: 16px;
         }
 
-        /* Media query para telas maiores (PC) */
         @media (min-width: 1024px) {
             .button {
                 width: 100%;
@@ -207,8 +188,10 @@
             }
         }
 
-        /* Media query para telas menores (Celular) */
         @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
             .button {
                 width: 100%;
             }
@@ -217,14 +200,11 @@
                 gap: 15px;
             }
         }
+
         .contact {
             font-size: 12px;
             color: #ccc;
             margin-top: 5px;
-        }
-        /* Estilo para as redes sociais */
-        .social-links p {
-            color: white;
         }
     </style>
 </head>
@@ -245,11 +225,8 @@
 
 <!-- Frase abaixo da imagem de propaganda -->
 <p class="highlight">10 Capítulos que vão mudar sua visão de vida.</p>
-    <!-- IMAGEM DO SUMÁRIO DO E-BOOK -->
-
-<img src="https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20sum%C3%A1rio%20e-book(Viver%20%C3%A9%20Al%C3%A9m%20de%20Existir).png?raw=true" 
-     alt="Sumário do E-book" 
-     class="product-image">
+<!-- IMAGEM DO SUMÁRIO DO E-BOOK -->
+<img src="https://github.com/IPnoisy/paginadevenda/blob/main/imagem%20sum%C3%A1rio%20e-book(Viver%20%C3%A9%20Al%C3%A9m%20de%20Existir).png?raw=true" alt="Sumário do E-book" class="product-image">
 
 <!-- Seção "Por que comprar?" -->
 <div class="content">
@@ -259,15 +236,17 @@
     <p class="highlight" style="font-size: 30px; font-weight: bold; color: #ffcc00; text-shadow: 0 0 15px rgba(255, 204, 0, 0.8);">Por apenas:</p>
     <p class="price" style="font-size: 45px; font-weight: bold; color: #ff4500; background: black; padding: 15px 40px; border-radius: 10px; display: inline-block; box-shadow: 3px 3px 15px rgba(255, 69, 0, 0.5);">R$ 14,90</p>
     
-   <div style="margin-top: 50px; text-align: center; width: 100%;">
-    <iframe src="https://pay.cakto.com.br/c5NpFgc" width="100%" height="400px" style="border:none;"></iframe>
-</div>
-    <!-- Botão para amostra grátis -->
-<button id="amostraBtn" class="button">Amostra Grátis Capítulo 1</button>
+    <div style="margin-top: 50px; text-align: center; width: 100%;">
+        <iframe src="https://pay.cakto.com.br/c5NpFgc" width="100%" height="400px" style="border:none;"></iframe>
+    </div>
 
-<!-- Imagem da amostra (inicialmente oculta) -->
-<div id="amostraContainer" style="display: none; text-align: center; margin-top: 20px;">
-    <img src="https://github.com/IPnoisy/paginadevenda/blob/main/amostra%20e-book%20viver%20%C3%A9%20al%C3%A9m%20de%20existir.png?raw=true" alt="Amostra Capítulo 1" style="max-width: 100%; border-radius: 10px; box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);">
+    <!-- Botão para amostra grátis -->
+    <button id="amostraBtn" class="button">Amostra Grátis Capítulo 1</button>
+
+    <!-- Imagem da amostra (inicialmente oculta) -->
+    <div id="amostraContainer" style="display: none; text-align: center; margin-top: 20px;">
+        <img src="https://github.com/IPnoisy/paginadevenda/blob/main/amostra%20e-book%20viver%20%C3%A9%20al%C3%A9m%20de%20existir.png?raw=true" alt="Amostra Capítulo 1" style="max-width: 100%; border-radius: 10px; box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);">
+    </div>
 </div>
 
 <script>
