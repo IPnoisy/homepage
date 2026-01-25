@@ -7,13 +7,19 @@
 
 <meta name="description" content="Vere Vivere não é motivação. É confronto. Um e-book para quem cansou de sobreviver e decidiu viver com consciência.">
 
+<!-- FONTES PREMIUM -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(180deg,#0f0f0f,#1b1b1b,#121212);
-    color:#eaeaea;
+    font-family:'Inter',sans-serif;
+    color:#f1f1f1;
+    background:
+        radial-gradient(circle at 20% 20%, #2a1f14, #0d0d0d 40%),
+        linear-gradient(180deg,#0b0b0b,#141414);
+    background-attachment:fixed;
     text-align:center;
     line-height:1.6;
     overflow-x:hidden;
@@ -21,48 +27,56 @@ body{
 
 /* ANIMAÇÕES */
 @keyframes fadeUp{
-    from{opacity:0;transform:translateY(30px);}
+    from{opacity:0;transform:translateY(40px);}
     to{opacity:1;transform:translateY(0);}
+}
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
 }
 @keyframes pulse{
     0%{box-shadow:0 0 0 rgba(255,183,77,.4);}
-    70%{box-shadow:0 0 25px rgba(255,183,77,.6);}
+    70%{box-shadow:0 0 30px rgba(255,183,77,.7);}
     100%{box-shadow:0 0 0 rgba(255,183,77,0);}
-}
-@keyframes bounce{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(8px);}
 }
 
 /* HEADER */
 header{
-    padding:90px 20px 70px;
-    animation:fadeUp 1s forwards;
+    padding:70px 20px 30px;
+    max-width:820px;
+    margin:auto;
+    animation:fadeUp 1.2s forwards;
 }
 
 header h1{
-    font-size:38px;
+    font-family:'Playfair Display',serif;
+    font-size:46px;
     font-weight:700;
+    line-height:1.2;
+}
+
+header h1 span{
     color:#ffb74d;
 }
 
 header p{
-    margin-top:14px;
-    font-size:15px;
-    color:#cfcfcf;
+    margin-top:20px;
+    font-size:16px;
+    color:#d0d0d0;
 }
 
+/* INDICADOR SCROLL */
 .scroll-indicator{
-    margin-top:45px;
+    margin-top:30px;
     font-size:22px;
     color:#ffb74d;
-    animation:bounce 1.5s infinite;
+    animation:float 2s infinite;
 }
 
 /* SECTIONS */
 section{
     max-width:640px;
-    margin:80px auto;
+    margin:40px auto 90px;
     padding:0 20px;
 }
 
@@ -72,9 +86,9 @@ section{
 }
 
 .block h2{
-    font-size:24px;
+    font-family:'Playfair Display',serif;
+    font-size:26px;
     margin-bottom:18px;
-    font-weight:700;
 }
 
 .block p{
@@ -85,19 +99,19 @@ section{
 /* IMAGE */
 .product-image{
     width:100%;
-    max-width:460px;
-    border-radius:12px;
-    margin:55px auto;
-    box-shadow:0 0 35px rgba(0,0,0,.7);
-    animation:fadeUp 1s forwards;
+    max-width:420px;
+    border-radius:14px;
+    margin:35px auto 20px;
+    box-shadow:0 0 45px rgba(0,0,0,.8);
+    animation:fadeUp 1.2s forwards;
 }
 
 /* DIVIDER */
 .divider{
-    width:70px;
+    width:80px;
     height:2px;
     background:#ffb74d;
-    margin:70px auto;
+    margin:60px auto;
     opacity:.7;
 }
 
@@ -107,19 +121,17 @@ section{
     padding-left:18px;
     text-align:left;
 }
-.warning h2{
-    color:#ffb74d;
-}
+.warning h2{color:#ffb74d;}
 
 /* BENEFITS */
 .benefits p{
     text-align:left;
     margin-bottom:10px;
     position:relative;
-    padding-left:16px;
+    padding-left:18px;
 }
 .benefits p::before{
-    content:"•";
+    content:"—";
     position:absolute;
     left:0;
     color:#ffb74d;
@@ -127,53 +139,47 @@ section{
 
 /* PRICE */
 .price-box{
-    margin-top:50px;
-    animation:fadeUp 1s forwards;
+    margin-top:40px;
 }
 
 .old-price{
     font-size:16px;
-    color:#999;
+    color:#aaa;
     text-decoration:line-through;
 }
 
 .price{
-    font-size:48px;
+    font-size:52px;
     font-weight:700;
     color:#ffb74d;
-    margin:8px 0;
+    margin:6px 0;
 }
 
 .timer{
-    margin-top:14px;
+    margin-top:12px;
     display:inline-block;
-    padding:6px 14px;
-    border:1px solid rgba(255,183,77,.4);
-    border-radius:20px;
+    padding:7px 18px;
+    border:1px solid rgba(255,183,77,.5);
+    border-radius:30px;
     font-size:13px;
-    color:#ffddb0;
+    color:#ffe0b2;
 }
 
 /* CTA */
-.cta{
-    margin-top:35px;
-}
-
+.cta{margin-top:35px;}
 .cta button{
     background:#ffb74d;
     border:none;
     color:#000;
-    padding:16px 34px;
+    padding:18px 38px;
     font-size:16px;
     font-weight:700;
     cursor:pointer;
-    border-radius:8px;
-    animation:pulse 2.5s infinite;
+    border-radius:10px;
+    animation:pulse 3s infinite;
     transition:.3s;
 }
-.cta button:hover{
-    transform:scale(1.05);
-}
+.cta button:hover{transform:scale(1.06);}
 
 /* PAYMENT */
 iframe{
@@ -181,18 +187,14 @@ iframe{
     max-width:600px;
     height:400px;
     border:none;
-    margin-top:50px;
+    margin-top:55px;
 }
 
 /* FOOTER */
 footer{
-    margin:100px 0 40px;
+    margin:90px 0 40px;
     font-size:12px;
     color:#777;
-}
-
-.social{
-    margin-top:25px;
 }
 
 .social img{
@@ -201,13 +203,10 @@ footer{
     opacity:.7;
     transition:.3s;
 }
-.social img:hover{
-    opacity:1;
-}
+.social img:hover{opacity:1;}
 
-/* RESPONSIVE */
 @media(max-width:600px){
-    header h1{font-size:28px;}
+    header h1{font-size:32px;}
 }
 </style>
 </head>
@@ -215,35 +214,34 @@ footer{
 <body>
 
 <header>
-    <h1>Sobreviver é automático. Viver é escolha.</h1>
+    <h1>
+        <span>Sobreviver</span> é automático.<br>
+        <span>Viver</span> é escolha.
+    </h1>
     <p>Nem todo mundo está pronto para assumir essa responsabilidade.</p>
     <div class="scroll-indicator">⬇</div>
 </header>
 
 <section>
 
+<img src="https://raw.githubusercontent.com/IPnoisy/homepage/refs/heads/main/imagem%20do%20produto%20venda%20(Vere%20vivere).png" class="product-image">
+
 <div class="block">
-    <h2>Você sente que algo está errado — mas não sabe o quê.</h2>
+    <h2>Você sente que algo está errado.</h2>
     <p>
-        Não é preguiça.  
-        Não é falta de motivação.  
-        E não é azar.
-        <br><br>
+        Não é falta de vontade.<br>
+        Não é preguiça.<br><br>
         É consciência adormecida.
     </p>
 </div>
-
-<img src="https://raw.githubusercontent.com/IPnoisy/homepage/refs/heads/main/imagem%20do%20produto%20venda%20(Vere%20vivere).png" class="product-image">
 
 <div class="divider"></div>
 
 <div class="block warning">
     <h2>Leia com atenção</h2>
     <p>
-        Vere Vivere não foi escrito para confortar.
-        <br><br>
-        Ele remove camadas que você talvez use
-        para evitar decisões.
+        Vere Vivere não foi escrito para confortar.<br><br>
+        Ele remove camadas que você talvez use para evitar decisões.
     </p>
 </div>
 
@@ -254,7 +252,7 @@ footer{
     <p>ilusões confortáveis</p>
     <p>distrações modernas</p>
     <p>desculpas emocionais</p>
-    <p>adiamentos conscientes</p>
+    <p>decisões adiadas</p>
 </div>
 
 <div class="divider"></div>
@@ -262,9 +260,8 @@ footer{
 <div class="block">
     <h2>Se continuar assim, nada muda.</h2>
     <p>
-        A maioria vai fechar esta página.
-        <br><br>
-        Não porque é caro.
+        A maioria fecha esta página.<br><br>
+        Não porque é caro.<br>
         Mas porque exige responsabilidade.
     </p>
 </div>
@@ -273,7 +270,7 @@ footer{
     <div class="old-price">De R$ 32,90</div>
     <div class="price">R$ 11,90</div>
 
-    <div class="timer" id="timer">Oferta ativa por tempo limitado</div>
+    <div class="timer" id="timer">Condição ativa por tempo limitado</div>
 
     <div class="cta">
         <button onclick="document.getElementById('checkout').scrollIntoView({behavior:'smooth'})">
