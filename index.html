@@ -1,247 +1,268 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vere Vivere | Página Oficial</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Vere Vivere é um e-book direto, profundo e real para quem cansou de sobreviver no automático e decidiu viver com consciência, foco e propósito.">
+<title>Vere Vivere | Página Oficial</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="description" content="Vere Vivere é um e-book direto, profundo e real para quem cansou de sobreviver no automático e decidiu viver com consciência, foco e propósito.">
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #2c2c2c;
-            color: #f1f1f1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            padding-bottom: 120px;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background-color: #1f1f1f;
-            width: 100%;
-            padding: 25px 15px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #1c1c1c, #2c2c2c);
+    color: #f1f1f1;
+    text-align: center;
+    padding-bottom: 140px;
+}
 
-        h1 {
-            font-size: 30px;
-            font-weight: bold;
-            color: #ffffff;
-        }
+/* HEADER */
+header {
+    background: #111;
+    padding: 40px 20px;
+}
 
-        header p {
-            font-size: 14px;
-            color: #bdbdbd;
-            margin-top: 8px;
-        }
+header h1 {
+    font-size: 32px;
+    max-width: 800px;
+    margin: auto;
+}
 
-        .content {
-            max-width: 600px;
-            width: 90%;
-            padding: 22px;
-            background: #e0e0e0;
-            border-radius: 10px;
-            margin: 22px 0;
-            color: #333;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s forwards;
-        }
+header p {
+    font-size: 15px;
+    color: #bdbdbd;
+    margin-top: 10px;
+}
 
-        .dark-content {
-            background: #1e1e1e;
-            color: #f1f1f1;
-        }
+/* CTA BUTTON */
+.cta-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 18px 45px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #ff4500;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(255,69,0,0.6);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: pulse 2s infinite;
+}
 
-        .dark-content h2,
-        .dark-content p {
-            color: #f1f1f1;
-        }
+.cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255,69,0,0.9);
+}
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+@keyframes pulse {
+    0% { box-shadow: 0 0 15px rgba(255,69,0,0.5); }
+    50% { box-shadow: 0 0 30px rgba(255,69,0,0.9); }
+    100% { box-shadow: 0 0 15px rgba(255,69,0,0.5); }
+}
 
-        .content h2 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
+/* CONTENT CARDS */
+.section {
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 28px;
+    background: #e0e0e0;
+    color: #333;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
 
-        .content p {
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
+.section.dark {
+    background: #141414;
+    color: #f1f1f1;
+}
 
-        .product-image {
-            max-width: 100%;
-            width: 450px;
-            border-radius: 10px;
-            margin: 25px 0;
-            box-shadow: 0 0 15px rgba(0,0,0,0.5);
-            animation: fadeInUp 1s forwards;
-            opacity: 0;
-            transform: translateY(30px);
-        }
+.section h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
 
-        .highlight {
-            font-size: 22px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
+.section p {
+    font-size: 16px;
+    line-height: 1.7;
+}
 
-        .benefits p {
-            text-align: left;
-            font-size: 15px;
-        }
+/* IMAGE */
+.product-image {
+    max-width: 90%;
+    width: 420px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
 
-        .price-label {
-            font-size: 15px;
-            margin-top: 10px;
-        }
+/* HIGHLIGHT */
+.highlight {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 25px 0;
+}
 
-        .price {
-            font-size: 44px;
-            font-weight: bold;
-            color: #ff4500;
-            background: #000;
-            padding: 15px 40px;
-            border-radius: 10px;
-            display: inline-block;
-            box-shadow: 0 0 15px rgba(255,69,0,0.5);
-            margin: 10px 0;
-        }
+/* BENEFITS */
+.benefits p {
+    text-align: left;
+    font-size: 16px;
+    margin: 8px 0;
+}
 
-        .security-text {
-            font-size: 13px;
-            color: #555;
-            margin-bottom: 15px;
-        }
+/* PRICE */
+.price-box {
+    margin-top: 20px;
+}
 
-        iframe {
-            max-width: 600px;
-            width: 100%;
-            height: 400px;
-            border: none;
-        }
+.price-label {
+    font-size: 15px;
+}
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 40px;
-        }
+.price {
+    font-size: 46px;
+    font-weight: bold;
+    color: #ff4500;
+    background: #000;
+    padding: 18px 45px;
+    border-radius: 12px;
+    display: inline-block;
+    margin: 15px 0;
+}
 
-        .social-links img {
-            width: 38px;
-            height: 38px;
-        }
+/* URGENCY */
+.urgency {
+    font-size: 14px;
+    color: #ffb199;
+    margin-top: 10px;
+}
 
-        footer {
-            background-color: #1f1f1f;
-            width: 100%;
-            position: fixed;
-            bottom: 0;
-            padding: 10px;
-            font-size: 12px;
-            color: #ccc;
-        }
+/* IFRAME */
+iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    border: none;
+    margin-top: 20px;
+}
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 26px;
-            }
-            .price {
-                font-size: 38px;
-            }
-        }
-    </style>
+/* SOCIAL */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.social-links img {
+    width: 36px;
+    height: 36px;
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+    padding: 12px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 26px;
+    }
+    .price {
+        font-size: 38px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <header>
     <h1>"Sobreviver é automático. Viver é escolha."</h1>
-    <p>Para quem cansou de existir no modo automático.</p>
+    <p>Se você sente que algo está errado, este livro não é coincidência.</p>
+
+    <a href="#comprar" class="cta-btn">QUERO VIVER DE VERDADE</a>
 </header>
 
-<div class="content">
+<div class="section">
     <h2>Você não está perdido. Está adormecido.</h2>
     <p>
-        A maioria das pessoas vive reagindo ao mundo, não escolhendo.
-        <br><br>
-        <strong>Vere Vivere</strong> é um chamado à consciência.
-        Um livro direto, sem frases vazias, criado para quem decidiu assumir o controle da própria vida.
+        A maioria vive reagindo, não escolhendo.<br><br>
+        <strong>Vere Vivere</strong> não motiva. Ele desperta.
+        É um confronto direto com a mente de quem cansou de sobreviver.
     </p>
 </div>
 
-<img src="https://raw.githubusercontent.com/IPnoisy/homepage/refs/heads/main/imagem%20do%20produto%20venda%20(Vere%20vivere).png" 
+<img src="https://raw.githubusercontent.com/IPnoisy/homepage/refs/heads/main/imagem%20do%20produto%20venda%20(Vere%20vivere).png"
 alt="Capa do e-book Vere Vivere" class="product-image">
 
-<p class="highlight">10 capítulos que mudam a forma como você pensa, age e vive.</p>
+<p class="highlight">10 capítulos. Nenhum deles confortável.</p>
 
-<div class="content dark-content">
-    <h2>⚠ Leia antes de continuar</h2>
+<div class="section dark">
+    <h2>⚠ Atenção</h2>
     <p>
-        Este e-book <strong>não é</strong> para quem busca motivação barata,
-        frases bonitas ou atalhos fáceis.
-        <br><br>
-        É para quem aceita encarar a própria mente,
-        abandonar desculpas e viver com responsabilidade.
+        Este livro não é para distração.<br><br>
+        É para quem aceita responsabilidade,
+        silêncio interno e mudança real.
     </p>
 </div>
 
-<div class="content benefits">
-    <h2>O que este livro destrava em você</h2>
-    <p>✔ Clareza mental em decisões difíceis</p>
-    <p>✔ Consciência sobre hábitos que te sabotam</p>
-    <p>✔ Controle emocional sob pressão</p>
-    <p>✔ Direção quando tudo parece confuso</p>
-    <p>✔ Uma nova forma de enxergar a própria vida</p>
+<div class="section benefits">
+    <h2>O que muda após a leitura</h2>
+    <p>✔ Decisões mais firmes</p>
+    <p>✔ Consciência brutal sobre hábitos</p>
+    <p>✔ Controle emocional</p>
+    <p>✔ Direção em meio ao caos</p>
+    <p>✔ Clareza sobre quem você é</p>
 </div>
 
-<div class="content">
-    <h2>Adquira agora o acesso completo</h2>
+<div class="section" id="comprar">
+    <h2>Acesso imediato</h2>
 
-    <p class="price-label">Valor especial por tempo limitado:</p>
-    <p class="price">R$ 11,90</p>
-
-    <p class="security-text">
-        Acesso imediato • Pagamento seguro • Conteúdo digital
-    </p>
+    <div class="price-box">
+        <p class="price-label">Valor atual:</p>
+        <div class="price">R$ 11,90</div>
+        <p class="urgency">Preço pode subir sem aviso.</p>
+    </div>
 
     <iframe src="https://pay.cakto.com.br/c5NpFgc"></iframe>
 
-    <p class="security-text" style="margin-top:10px;">
-        Se fizer sentido para você, continue.  
-        Caso contrário, feche esta página.
+    <p style="font-size:14px; margin-top:12px;">
+        Se isso te incomoda, é porque é pra você.
     </p>
 </div>
 
 <div class="social-links">
     <a href="https://www.tiktok.com/@ip_noisy" target="_blank">
-        <img src="https://raw.githubusercontent.com/IPnoisy/paginadevenda/main/logo%20tiktok.webp" alt="TikTok">
+        <img src="https://raw.githubusercontent.com/IPnoisy/paginadevenda/main/logo%20tiktok.webp" alt="TikTok"><br>@ip_noisy
     </a>
     <a href="https://www.instagram.com/ip_noisy" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"><br>@ip_noisy
     </a>
 </div>
 
 <footer>
     <p>Contato: ipnoisyy@gmail.com</p>
-    <p>&copy; 2025 Vere Vivere. Todos os direitos reservados.</p>
+    <p>&copy; 2025 Vere Vivere</p>
 </footer>
 
 </body>
