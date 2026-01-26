@@ -7,21 +7,21 @@
 
 <meta name="description" content="Vere Vivere não é motivação. É confronto. Um e-book para quem cansou de sobreviver e decidiu viver com consciência.">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 
 body{
     font-family:'Inter',sans-serif;
-    color:#f1f1f1;
+    color:#f2f2f2;
     background:
-        radial-gradient(circle at 20% 20%, #2a1f14, #0d0d0d 40%),
-        linear-gradient(180deg,#0b0b0b,#141414);
+        radial-gradient(circle at 20% 15%, #2b2016, #0c0c0c 45%),
+        linear-gradient(180deg,#0a0a0a,#141414);
     background-attachment:fixed;
-    transition:background 0.4s ease;
+    transition:.4s ease;
     text-align:center;
-    line-height:1.6;
+    line-height:1.65;
     overflow-x:hidden;
 }
 
@@ -32,26 +32,26 @@ body{
 }
 @keyframes float{
     0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-8px);}
+    50%{transform:translateY(-10px);}
 }
 @keyframes pulse{
     0%{box-shadow:0 0 0 rgba(255,183,77,.3);}
-    70%{box-shadow:0 0 35px rgba(255,183,77,.7);}
+    70%{box-shadow:0 0 40px rgba(255,183,77,.7);}
     100%{box-shadow:0 0 0 rgba(255,183,77,0);}
 }
 
 /* HEADER */
 header{
-    padding:90px 20px 50px;
+    padding:80px 20px 40px;
     max-width:860px;
     margin:auto;
 }
 
 header h1{
     font-family:'Playfair Display',serif;
-    font-size:52px;
-    font-weight:700;
-    line-height:1.15;
+    font-size:56px;
+    font-weight:800;
+    line-height:1.1;
 }
 
 header h1 span{color:#ffb74d;}
@@ -59,36 +59,33 @@ header h1 span{color:#ffb74d;}
 header p{
     margin-top:22px;
     font-size:17px;
-    color:#d0d0d0;
+    color:#d6d6d6;
 }
 
 header .micro{
-    margin-top:18px;
+    margin-top:16px;
     font-size:13px;
     color:#9e9e9e;
-    letter-spacing:.3px;
 }
 
 /* SCROLL */
 .scroll-indicator{
-    margin-top:40px;
+    margin-top:32px;
     font-size:26px;
     color:#ffb74d;
     animation:float 2s infinite;
     cursor:pointer;
-    transition:.3s;
 }
-.scroll-indicator:hover{opacity:.6}
 
 /* SECTIONS */
 section{
-    max-width:680px;
-    margin:40px auto 100px;
+    max-width:720px;
+    margin:20px auto 110px;
     padding:0 20px;
 }
 
 .block{
-    margin-bottom:65px;
+    margin-bottom:70px;
     opacity:0;
     transform:translateY(40px);
     transition:1s ease;
@@ -101,10 +98,10 @@ section{
 /* IMAGE */
 .product-image{
     width:100%;
-    max-width:440px;
-    border-radius:16px;
-    margin:30px auto 10px;
-    box-shadow:0 0 55px rgba(0,0,0,.85);
+    max-width:460px;
+    border-radius:18px;
+    margin:25px auto 10px;
+    box-shadow:0 0 65px rgba(0,0,0,.85);
 }
 
 /* DIVIDER */
@@ -116,20 +113,12 @@ section{
     opacity:.7;
 }
 
-/* WARNING */
-.warning{
-    border-left:4px solid #ffb74d;
-    padding-left:18px;
-    text-align:left;
-}
-.warning h2{color:#ffb74d;}
-
 /* BENEFITS */
 .benefits p{
     text-align:left;
-    margin-bottom:10px;
+    margin-bottom:12px;
     position:relative;
-    padding-left:18px;
+    padding-left:20px;
 }
 .benefits p::before{
     content:"—";
@@ -138,22 +127,22 @@ section{
     color:#ffb74d;
 }
 
-/* EXCLUSÃO */
-.exclusion{
+/* VALUE */
+.value-box{
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,183,77,.15);
+    border-radius:18px;
+    padding:26px;
     text-align:left;
-    color:#bdbdbd;
 }
-.exclusion strong{color:#ffb74d;}
-
-/* SOCIAL PROOF */
-.social-proof{
-    font-style:italic;
-    color:#cfcfcf;
-    font-size:14px;
+.value-box p{
+    margin-bottom:10px;
 }
 
 /* PRICE */
-.price-box{margin-top:40px;}
+.price-box{
+    margin-top:40px;
+}
 
 .old-price{
     font-size:15px;
@@ -162,16 +151,15 @@ section{
 }
 
 .price{
-    font-size:58px;
-    font-weight:700;
+    font-size:62px;
+    font-weight:800;
     color:#ffb74d;
-    margin:6px 0;
 }
 
 .timer{
-    margin-top:14px;
+    margin-top:12px;
     display:inline-block;
-    padding:8px 22px;
+    padding:8px 24px;
     border:1px solid rgba(255,183,77,.5);
     border-radius:30px;
     font-size:13px;
@@ -179,24 +167,32 @@ section{
 }
 
 /* CTA */
-.cta{margin-top:38px;}
+.cta{
+    margin-top:32px;
+}
 .cta button{
     background:#ffb74d;
     border:none;
     color:#000;
-    padding:20px 46px;
-    font-size:16px;
-    font-weight:700;
+    padding:22px 52px;
+    font-size:17px;
+    font-weight:800;
     cursor:pointer;
-    border-radius:14px;
+    border-radius:16px;
     animation:pulse 3s infinite;
     transition:.3s;
 }
-.cta button:hover{transform:scale(1.1);}
+.cta button:hover{transform:scale(1.08);}
+
+.cta-note{
+    margin-top:10px;
+    font-size:12px;
+    color:#bdbdbd;
+}
 
 /* FOOTER */
 footer{
-    margin:110px 0 40px;
+    margin:120px 0 40px;
     font-size:12px;
     color:#777;
 }
@@ -207,7 +203,7 @@ footer{
     opacity:.7;
     transition:.3s;
 }
-.social img:hover{opacity:1;}
+.social img:hover{opacity:1}
 
 .contact a{
     color:#f1f1f1;
@@ -215,10 +211,9 @@ footer{
     font-size:13px;
     opacity:.6;
 }
-.contact a:hover{opacity:.9}
 
 @media(max-width:600px){
-    header h1{font-size:36px;}
+    header h1{font-size:38px;}
 }
 </style>
 </head>
@@ -228,10 +223,10 @@ footer{
 <header>
     <h1>
         <span>Sobreviver</span> é automático.<br>
-        <span>Viver</span> é escolha consciente.
+        <span>Viver</span> é decisão consciente.
     </h1>
-    <p>Não é sobre motivação. É sobre responsabilidade.</p>
-    <div class="micro">Se isso te incomoda, este livro não é pra você.</div>
+    <p>Não é motivação. É responsabilidade pessoal.</p>
+    <div class="micro">A maioria fecha esta página aqui.</div>
     <div class="scroll-indicator" onclick="window.scrollBy({top:window.innerHeight,behavior:'smooth'})">⌄</div>
 </header>
 
@@ -240,43 +235,31 @@ footer{
 <img src="https://raw.githubusercontent.com/IPnoisy/homepage/refs/heads/main/imagem%20do%20produto%20venda%20(Vere%20vivere).png" class="product-image">
 
 <div class="block">
-    <h2>Você sente que algo está errado.</h2>
-    <p>Não é falta de vontade.<br>Não é preguiça.<br><br>É consciência adormecida.</p>
-</div>
-
-<div class="divider"></div>
-
-<div class="block warning">
-    <h2>Leia com atenção</h2>
-    <p>Vere Vivere não foi escrito para confortar.<br><br>Ele confronta decisões que você vem adiando.</p>
+    <h2>Algo em você sabe que não está vivendo.</h2>
+    <p>Você funciona.<br>Você produz.<br><br>Mas não sente presença.</p>
 </div>
 
 <div class="divider"></div>
 
 <div class="block benefits">
-    <h2>Este livro não ensina. Ele remove.</h2>
+    <h2>O que este livro remove:</h2>
     <p>ilusões confortáveis</p>
-    <p>distrações modernas</p>
-    <p>desculpas emocionais</p>
-    <p>autoengano cotidiano</p>
+    <p>autoengano moderno</p>
+    <p>distrações emocionais</p>
+    <p>decisões constantemente adiadas</p>
 </div>
 
 <div class="divider"></div>
 
-<div class="block exclusion">
-    <h2>Este livro <strong>não</strong> é para:</h2>
-    <p>— quem busca frases bonitas</p>
-    <p>— quem terceiriza responsabilidade</p>
-    <p>— quem prefere conforto à verdade</p>
+<div class="block value-box">
+    <h2>O que você recebe:</h2>
+    <p>• Leitura direta e confrontativa</p>
+    <p>• Reflexões práticas e aplicáveis</p>
+    <p>• Conteúdo curto, denso e consciente</p>
+    <p>• Acesso imediato após o pagamento</p>
 </div>
 
 <div class="divider"></div>
-
-<div class="block social-proof">
-    “A maioria fecha esta página.<br>
-    Não porque é caro.<br>
-    Mas porque exige mudança real.”
-</div>
 
 <div class="price-box block">
     <div class="old-price">De R$ 32,90</div>
@@ -286,6 +269,7 @@ footer{
         <button onclick="window.location.href='https://pay.cakto.com.br/c5NpFgc'">
             Assumir responsabilidade
         </button>
+        <div class="cta-note">Pagamento seguro • Acesso imediato</div>
     </div>
 </div>
 
@@ -307,8 +291,7 @@ footer{
 </footer>
 
 <script>
-/* TIMER */
-const end = new Date().getTime() + (10*60*1000);
+const end = new Date().getTime() + (12*60*1000);
 setInterval(()=>{
     const now=new Date().getTime();
     const diff=end-now;
@@ -319,10 +302,9 @@ setInterval(()=>{
     }
     const m=Math.floor(diff/60000);
     const s=Math.floor((diff%60000)/1000);
-    t.innerText=`Condição ativa por ${m}:${s<10?"0":""}${s}`;
+    t.innerText=`Oferta ativa por ${m}:${s<10?"0":""}${s}`;
 },1000);
 
-/* SCROLL REVEAL */
 const blocks=document.querySelectorAll('.block');
 const obs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
@@ -330,13 +312,6 @@ const obs=new IntersectionObserver(entries=>{
     });
 },{threshold:.2});
 blocks.forEach(b=>obs.observe(b));
-
-/* BACKGROUND DINÂMICO */
-window.addEventListener('scroll',()=>{
-    const y=window.scrollY;
-    document.body.style.background=
-    `radial-gradient(circle at ${20+y/20}% ${20+y/30}%, #2a1f14, #0d0d0d 40%), linear-gradient(180deg,#0b0b0b,#141414)`;
-});
 </script>
 
 </body>
