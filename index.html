@@ -179,7 +179,7 @@ section{
 /* PAYMENT */
 iframe{
     width:100%;
-    height:1600px;
+    height:1400px;
     border:none;
 }
 
@@ -261,7 +261,7 @@ footer{
     <div class="price">R$ 11,90</div>
     <div class="timer" id="timer"></div>
     <div class="cta">
-        <button onclick="document.getElementById('checkout').scrollIntoView({behavior:'smooth'})">
+        <button onclick="window.location.href='https://pay.cakto.com.br/c5NpFgc'">
             Garantir acesso
         </button>
     </div>
@@ -275,8 +275,12 @@ footer{
 
 <footer>
     <div class="social">
-        <a href="https://www.tiktok.com/@ip_noisy" target="_blank"><img src="https://raw.githubusercontent.com/IPnoisy/paginadevenda/main/logo%20tiktok.webp"></a>
-        <a href="https://www.instagram.com/ip_noisy" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"></a>
+        <a href="https://www.tiktok.com/@ip_noisy" target="_blank">
+            <img src="https://raw.githubusercontent.com/IPnoisy/paginadevenda/main/logo%20tiktok.webp">
+        </a>
+        <a href="https://www.instagram.com/ip_noisy" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+        </a>
     </div>
     <div class="contact">
         <a href="mailto:ipnoisy@gmail.com">ipnoisy@gmail.com</a>
@@ -291,7 +295,10 @@ setInterval(()=>{
     const now=new Date().getTime();
     const diff=end-now;
     const t=document.getElementById("timer");
-    if(diff<=0){t.innerText="Esta condição pode não se repetir.";return;}
+    if(diff<=0){
+        t.innerText="Esta condição pode não se repetir.";
+        return;
+    }
     const m=Math.floor(diff/60000);
     const s=Math.floor((diff%60000)/1000);
     t.innerText=`Condição ativa por ${m}:${s<10?"0":""}${s}`;
@@ -300,7 +307,9 @@ setInterval(()=>{
 /* SCROLL REVEAL */
 const blocks=document.querySelectorAll('.block');
 const obs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});
+    entries.forEach(e=>{
+        if(e.isIntersecting) e.target.classList.add('show');
+    });
 },{threshold:.2});
 blocks.forEach(b=>obs.observe(b));
 
